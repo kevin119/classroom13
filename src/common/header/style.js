@@ -6,34 +6,31 @@ export const HeaderWrapper = styled.div `
     z-index:1;
     position:relative;
     height:80px;
-    margin:0 auto;
-    overflow:hidden;
 `;
 
 export const Logo = styled.div `
-    width:144px;
+    position : absolute;
+    top:16px;
+    left:50px;
     height:48px;
+    width:144px;
     display:block;
     background:url(${logoPic});
     background-size:contain;
-    position:relative;
-    cursor:pointer;
-    float:left;
-    margin-top:16px;
-    margin-left:200px;
 `;
 
 export const Nav = styled.div `
-    box-sizing:border-box;
-    margin:0 auto;
-    height:100%;
+    width : 800px;
     padding-right:40px;
-    float:left;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+    margin: 0 auto;
+    height : 100%;
 `;
 
 export const NavItem = styled.div `
     position:relative;
-    z-index:2;
     padding:0 20px;
     line-height:80px;
     font-size:16px;
@@ -52,31 +49,33 @@ export const NavItem = styled.div `
 `;
 export const ProgramList = styled.div `
   position:absolute;
-  margin-left:20px;
   left:0;
-  top:64px;
-  width:100px;
-  height:200px;
-  padding:0 20px;
-  background-color:red;
+  top:56px;
+  width:130px;
+  overflow:hidden;
+  background-color:#fff;
+  color:gray;
+  line-height:40px;
+
 `;
 export const ProgramItem = styled.div `
-
+  
 `;
 export const Addition = styled.div `
   position:absolute;
+  right:0;
   top:0;
-  right:200px;
 `;
 
 export const Telephone = styled.div `
   float:right;
   margin-top:20px;
-  margin-right:20px;
+  margin-right:80px;
   padding:0 20px;
   line-height:40px;
   border-radius:20px;
   color:#2284F1;
   font-weight:bold;
   font-size:16px;
+  overflow:hidden;
 `;

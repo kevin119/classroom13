@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
-import {connect } from 'react-redux';
+import { connect } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
-import {Link,withRouter } from 'react-router-dom';
-import { actionCreators } from './store';
+import { actionCreators } from './store/index';
+import { Link,withRouter } from 'react-router-dom';
 import { HeaderWrapper,Logo,Nav,NavItem,ProgramList,ProgramItem,Addition,Telephone } from './style';
 
 
@@ -17,11 +17,13 @@ class Header extends PureComponent {
                         <NavItem className="left active"> 首页</NavItem>
                         <NavItem className="left">教学模式</NavItem>
                         <NavItem className="left">学生成果</NavItem>
-                        <NavItem className="left">编程创作</NavItem>
+                        <NavItem className="left">编程创作<i className="iconfont">&#xe658;</i>
+                            
+                        </NavItem>
                         <NavItem className="left"
-                                 onClick = {this.props.mouseOver}
-                                // onMouseOut = {this.props.mouseBlur}
-                            >社区<i className={ this.props.focused? "focused iconfont":"iconfont"}>&#xe658;</i>
+                                 onMouseEnter = {this.props.mouseEnter}
+                                 onMouseLeave = {this.props.mouseLeave}
+                            >社区<i className="iconfont">&#xe658;</i>
                             {this.getProgramList()}
                         </NavItem>
 
@@ -53,11 +55,11 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        mouseOver(){
-            dispatch(actionCreators.mouseFoucsAction())
+        mouseEnter(spin){
+            dispatch(actionCreators.mouseEnterAction())
         },
-        mouseBlur(){
-            dispatch(actionCreators.mouseBlurAction())
+        mouseLeave(){
+            dispatch(actionCreators.mouseLeaveAction())
         }
     }
 }

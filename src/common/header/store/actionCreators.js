@@ -3,10 +3,10 @@
  */
 import * as actionTypes from './actionTypes';
 
-export const mouseFoucsAction = () =>({
-    type:actionTypes.MOUSE_FOUCS
+export const mouseEnterAction = () =>({
+    type:actionTypes.MOUSE_ENTER
 });
 
-export const mouseBlurAction = () => ({
-    type:actionTypes.MOUSE_BLUR
+export const mouseLeaveAction = () => ({
+    type:actionTypes.MOUSE_LEAVE
 })

@@ -10,9 +10,9 @@ const defaultState = fromJS({
 
 export default (state = defaultState,action) => {
     switch (action.type){
-        case actionTypes.MOUSE_FOUCS:
+        case actionTypes.MOUSE_ENTER:
             return state.set('focused',true)
-        case actionTypes.MOUSE_BLUR:
+        case actionTypes.MOUSE_LEAVE:
             return state.set('focused',false)
         default:
             return state;

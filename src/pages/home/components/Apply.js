@@ -3,7 +3,7 @@
  */
 import React, { PureComponent } from 'react';
 
-import { ApplyWrapper,ApplyForm,Title,Content,Input,Select,Option,Button } from '../style';
+import { ApplyWrapper,ApplyForm,Title,Content,Input,Select,Option,VerifyCode,Button,ApplyButton } from '../style';
 
 
 class Apply extends PureComponent {
@@ -24,14 +24,18 @@ class Apply extends PureComponent {
                                 <Option value="6"></Option>
                             </Select>
                             <Input placeholder="家长手机号"/>
+                            <VerifyCode><div className="l-captcha" data-site-key="db29880385b30d5a2ac5a53c09080334" data-callback={this.getResponse()}></div></VerifyCode>
                             <Input style={{"width":"122px","float":"left"}} placeholder="验证码"/>
-                            <Button style={{"width":"122px","float":"right","background-color":"#2284f1"}}>获取验证码</Button>
+                            <ApplyButton>获取验证码</ApplyButton>
                             <Button>立即领取</Button>
                         </Content>
                     </ApplyForm>
                 </ApplyWrapper>
             </div>
         )
+    }
+    getResponse(resp){
+        console.log(resp);
     }
 }
 

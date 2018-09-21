@@ -5,7 +5,6 @@ import banner02 from '../../statics/feature.png';
 
 export const ApplyWrapper = styled.div `
     position:relative;
-    z-index:-1;
     display:block;
     height:640px;
     width:100%;
@@ -47,50 +46,64 @@ export const Content = styled.div `
 
 export const Input = styled.input `
     width: 100%;
-    height: 47px;
-    border-radius: 2px;
+    height: 40px;
+    border-radius: 5px;
     border: solid 1px #d3d3d3;
-    line-height: 47px;
+    line-height: 40px;
     font-size: 15px;
     outline: none;
-    margin-top: 17px;
+    margin-top: 15px;
     text-indent: 1em;
 `;
 export const Select = styled.select `
     width: 100%;
-    height: 47px;
-    border-radius: 2px;
+    height: 40px;
+    border-radius: 5px;
     border: solid 1px #d3d3d3;
-    line-height: 47px;
+    line-height: 40px;
     font-size: 15px;
     outline: none;
-    margin-top: 17px;
+    margin-top: 15px;
     text-indent: 1em;
 `;
 export const Option = styled.option `
+
+`;
+export const VerifyCode = styled.div `
     width: 100%;
-    height: 47px;
     border-radius: 2px;
-    border: solid 1px #d3d3d3;
     line-height: 47px;
     font-size: 15px;
     outline: none;
-    margin-top: 17px;
+    margin-top: 15px;
     text-indent: 1em;
+    &.l-captcha {
+        margin-left:0;
+        background-color:red;
+    }
 `;
 export const Button = styled.button `
     width: 265px;
-    height: 47px;
+    height: 48px;
     background: #E50012;
     border-radius: 2px;
-    margin-top: 20px;
+    margin-top: 15px;
     text-align: center;
-    line-height: 47px;
+    line-height: 40px;
     color: #fff;
     outline: none;
     border: none;
     font-size: 18px;
     border-radius:4px;
+    cursor:pointer;
+`;
+export const ApplyButton = Button.extend `
+    width:122px;
+    height:42px;
+    line-height:38px;
+    margin-top: 15px;
+    float:right;
+    background-color:#2284f1;
 `;
 export const DistinctWrapper = styled.div `
     width:1025px;
