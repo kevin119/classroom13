@@ -56,7 +56,6 @@ export const ProgramList = styled.div `
   background-color:#fff;
   color:gray;
   line-height:40px;
-
 `;
 export const ProgramItem = styled.div `
   
